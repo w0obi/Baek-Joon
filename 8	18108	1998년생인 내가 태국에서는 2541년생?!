@@ -1,0 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  int ad_to_be;
+
+	scanf("%d", &ad_to_be);
+
+	printf("%d", ad_to_be - 543);
+return 0;
+}
