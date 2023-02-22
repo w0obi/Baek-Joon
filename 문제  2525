@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  int IH, IM, CT;
+  scanf("%d %d %d", &IH, &IM, &CT);// (입력) 시작하는시간과요리시간
+
+  if (IM + CT > 60) {// 분과요리시간을더한시간이60분을넘은경우
+  IH += (IM + CT) / 60;
+  printf("%d %d", (IH % 24), (IM + CT) % 60);
+  }
+  else if (IM + CT < 60) {// 분과요리시간을더한시간이60분이하일때
+  printf("%d %d", (IH%24), IM + CT);
+  }
+  else if (IH == 23) {// 23H ~ 0H 사이, 분과요리시간을더한시간이60분을넘은경우
+  IH += (IM + CT) / 60;
+  printf("%d %d", (IH % 24), (IM + CT) % 60);
+  }
+}
