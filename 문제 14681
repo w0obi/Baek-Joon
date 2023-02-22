@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+int Xvalue, Yvalue;
+
+  	scanf("%d %d", &Xvalue, &Yvalue);
+
+		if (0 < Xvalue && 0 < Yvalue) {
+			printf("1");
+		}
+		else if (0 > Xvalue && 0 < Yvalue) {
+			printf("2");
+		}
+		else if (0 > Xvalue && 0 > Yvalue) {
+			printf("3");
+		}
+		else if (0 < Xvalue && 0 > Yvalue) {
+			printf("4");
+		}
+ }
