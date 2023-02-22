@@ -1,0 +1,9 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  long long InputOne, InputTwo, InputThree;
+
+  scanf("%lld %lld %lld", &InputOne, &InputTwo, &InputThree);
+  printf("%lld", InputOne + InputTwo + InputThree);
+}
