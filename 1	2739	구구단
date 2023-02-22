@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int Multiplication_Table_Number, Repeat_Number;
+
+	scanf("%d", &Multiplication_Table_Number);
+
+	for (Repeat_Number = 1; Repeat_Number <= 9; Repeat_Number++) {
+		Repeat_Number* Multiplication_Table_Number;
+		printf("%d*%d=%d\n",Multiplication_Table_Number,Repeat_Number, Repeat_Number* Multiplication_Table_Number);
+	}
+}
