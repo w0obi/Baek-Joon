@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  int InputHour, InputMinute;
+  int OutputHour, OutputMinute;
+
+  scanf("%d%d",&InputHour, &InputMinute);
+
+  if(InputMinute >= 45) {
+    OutputMinute = InputMinute - 45;
+  printf("%d %d", InputHour, OutputMinute);
+  }
+
+  else if(InputMinute < 45 && InputHour != 0) {
+      OutputMinute = InputMinute + 15;
+      OutputHour = InputHour - 1;
+  printf("%d%d",OutputHour, OutputMinute);
+  }
+  else if (InputHour == 0) {
+    OutputMinute=InputMinute+15;
+    OutputHour = 23;
+  printf("%d%d",OutputHour, OutputMinute);
+      }
+}
