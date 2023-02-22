@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  int Input, Tenth, Units, Sum=0, New=0, Cycle=0;
+  
+  scanf("%d", &Input);
+  Sum = Input;
+  
+  while(Sum == Input) {
+  
+  }
+}
