@@ -1,0 +1,14 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  int InputOne, InputTwo;
+
+  for (; ;) {
+  scanf("%d %d", &InputOne, &InputTwo);
+  if (InputOne == 0 && InputTwo == 0) {
+  break;
+  }
+  printf("%d\n", InputOne + InputTwo);
+  }
+}
