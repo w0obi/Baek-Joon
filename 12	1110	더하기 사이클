@@ -2,25 +2,5 @@
 #include <stdio.h>
 
 int main() {
-  int Input, Tenth, Units, Sum=0, New=0, Cycle=0;
-  scanf("%d", &Input);
-  Sum = Input;
   
-  if(Input == 0) {
-  printf("%d", ++Cycle);
-  return 0;
-  }
-  
-  while(Input != New) {
-  Tenth = (Sum / 10);
-  Units = (Sum % 10);
-  New = (Units + Tenth);
-  New = (Units * 10) + (New % 10);
-  Sum = New;
-  
-  ++Cycle;
-  }
-  
-  printf("%d", Cycle);
-  return 0;
 }
