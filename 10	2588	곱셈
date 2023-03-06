@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+  int main() {
+
+  int Natural_Number_A, Natural_Number_B;
+  int Divide_A, Divide_B, Modulo_A, Modulo_B;
+  int Cal_A, Cal_B, Cal_C, Total;
+
+  scanf("%d %d", &Natural_Number_A, &Natural_Number_B);
+
+  Divide_A = Natural_Number_B / 100;
+  Modulo_A = Natural_Number_B % 100;
+  Divide_B = Modulo_A / 10;
+  Modulo_B = Modulo_A % 10;
+
+  Cal_A = Natural_Number_A * Modulo_B;
+  Cal_B = Natural_Number_A * Divide_B;
+  Cal_C = Natural_Number_A * Divide_A;
+  Total = Cal_A + Cal_B*10 + Cal_C*100;
+
+  printf("%d\n", Cal_A);
+  printf("%d\n", Cal_B);
+  printf("%d\n", Cal_C);
+  printf("%d\n", Total);
+}

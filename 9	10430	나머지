@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+  int Modulo_A, Modulo_B, Modulo_C;
+  int Cal_A, Cal_B, Cal_C, Cal_D;
+  int Final_A, Final_B;
+
+  scanf("%d %d %d", &Modulo_A, &Modulo_B, &Modulo_C);
+
+  Cal_A = Modulo_A + Modulo_B;
+  printf("%d\n", Cal_A % Modulo_C);
+
+  Cal_B = Modulo_A % Modulo_C;
+  Cal_C = Modulo_B % Modulo_C;
+  Final_A = Cal_B + Cal_C;
+  printf("%d\n", Final_A % Modulo_C);
+
+  Cal_D = Modulo_A * Modulo_B;
+  printf("%d\n", Cal_D % Modulo_C);
+
+  Final_B = Cal_B * Cal_C;
+  printf("%d\n",Final_B % Modulo_C);
+
+  return 0;
+}
