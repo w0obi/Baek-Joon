@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  int Integer_A, Integer_B;
+
+  scanf("%d %d", &Integer_A, &Integer_B);
+
+  if (Integer_A > Integer_B) {
+    printf(">\n");
+  }
+  else if (Integer_A < Integer_B) {
+    printf("<\n");
+  }
+  else
+    printf("==\n");
+  return 0;
+}
