@@ -1,0 +1,14 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  char Count;
+  scanf("%hhd", &Count);
+
+  for (int Row = 0; Row < Count; Row++) {
+  for (int Column = 0; Column <= Row; Column++) {
+  printf("*");
+  }
+  printf("\n");
+  }
+}

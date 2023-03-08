@@ -1,0 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+    int TestCase, NumOne, NumTwo;
+    scanf("%d", &TestCase);
+
+    for (int i = 1; i <= TestCase; i++) {
+        scanf("%d %d", &NumOne, &NumTwo);
+        printf("%d\n", NumOne + NumTwo);
+    }
+}
