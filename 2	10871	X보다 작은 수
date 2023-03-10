@@ -6,13 +6,13 @@ int main() {
   int Array[10000];
   
   scanf("%d%d", &Number, &Aim);
-  for(int i = 0; i < Number; i++ ) {
+  for(int i = 0; i < Number; i++ ) {  // 반복문을 이용하여 배열을 입력받는다.
     scanf("%d", &Array[i]);
   }
   
-  for(int i = 0; i < Number; i++ ) {
-    if(Array[i] < Aim) {
-      printf("%d ", Array[i]);
+  for(int i = 0; i < Number; i++ ) {  // 반복문을 이용하여 배열에 저장된 정수를 비교한다.
+    if(Array[i] < Aim) {              // 만약, 배열 Array가 정수 Aim보다 작다면
+      printf("%d ", Array[i]);        // Aim 보다 작은 수를 입력받은 순서대로 공백으로 구분하여 출력한다.
     }
   }
 }
