@@ -2,21 +2,21 @@
 #include <stdio.h>
 
 int main() {
-    int N, v, count = 0;
-    int arr[100];
+    int Number, Aim, Output = 0;
+    int V[100];
 
-    scanf("%d", &N);
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &arr[i]);
+    scanf("%d", &Number);                // 정수의 개수 N
+    for (int i = 0; i < Number; i++) {
+        scanf("%d", &V[i]);              // 정수가 공백으로 구분
     }
 
-    scanf("%d", &v);
+    scanf("%d", &Aim);                   // 찾으려는 정수 Aim
 
-    for (int i = 0; i < N; i++) {
-        if (arr[i] == v) {
-            count++;
+    for (int i = 0; i < Number; i++) {
+        if (V[i] == Aim) {               // 만약, 배열의 값이 찾으려는 정수의 값과 같다면 Output을 증감
+            Output++;
         }
     }
 
-    printf("%d\n", count);
+    printf("%d\n", Output);              // 정수 aim의 개수를 출력
 }
