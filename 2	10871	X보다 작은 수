@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+  int Number, Aim, Output=0;
+  int Array[10000];
+  
+  scanf("%d%d", &Number, &Aim);
+  for(int i = 0; i < Number; i++ ) {
+    scanf("%d", &Array[i]);
+  }
+  
+  for(int i = 0; i < Number; i++ ) {
+    if(Array[i] < Aim) {
+      printf("%d ", Array[i]);
+    }
+  }
+}
