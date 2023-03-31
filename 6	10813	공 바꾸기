@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+/*공을 어떻게 바꿀지가 주어졌을 때, M번 공을 바꾼 이후에 각 바구니에 어떤 공이 들어있는지 구하는 프로그램*/
+int main() {
+	int Total_Basket, Count, i=0;
+	int Array[100] = { 0, };
+	
+	scanf("%d%d", &Total_Basket, &Count);
+
+	for (i = 1; i <= Total_Basket; i++) 
+		Array[i] = i;
+	
+	int Exchange = 0;
+	for (i = 0; i < Count; i++) {
+		int Before = 0, After = 0;							// 바구니 교환exchange 변수 선언
+		scanf("%d%d", &Before, &After);
+		
+		Exchange = Array[Before];
+		Array[Before] = Array[After];
+		Array[After] = Exchange;
+	}
+	for (int k = 1; k <= Total_Basket; k++) {
+		printf("%d ", Array[k]);
+	}
+	return 0;
+}
