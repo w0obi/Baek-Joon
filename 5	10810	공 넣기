@@ -1,0 +1,21 @@
+/*23.03.24 작성, 23.03.31 수정*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int Total_Basket, Count, j=0;
+	int Array[100] = {0, };
+
+	scanf("%d%d", &Total_Basket, &Count);
+	
+	int Start_Basket=0, End_Basket=0, Ball=0;
+	for (int i = 0; i < Count; i++) {
+		scanf("%d%d%d", &Start_Basket, &End_Basket, &Ball);
+		
+		for(j = Start_Basket; j <= End_Basket; j++) {	
+			Array[j] = Ball;
+		}
+	}
+	for(int k=1; k <= Total_Basket; k++)
+		printf("%d ", Array[k]);	
+}
