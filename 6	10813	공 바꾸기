@@ -8,11 +8,11 @@ int main() {
 	scanf("%d%d", &Total_Basket, &Count);
 
 	for (i = 1; i <= Total_Basket; i++) 
-		Array[i] = i;
-	
-	int Exchange = 0;
+		Array[i] = i;				/* 바구니에 번호를 부여 */
+
+	int Exchange = 0;				// 바구니 교환exchange 변수 선언
 	for (i = 0; i < Count; i++) {
-		int Before = 0, After = 0;							// 바구니 교환exchange 변수 선언
+		int Before = 0, After = 0;
 		scanf("%d%d", &Before, &After);
 		
 		Exchange = Array[Before];
