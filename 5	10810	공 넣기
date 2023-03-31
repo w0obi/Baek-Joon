@@ -1,4 +1,4 @@
-/*23.03.24 작성, 23.03.31 수정*/
+//03.03.24 작성, 23.03.31 수정
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -17,5 +17,5 @@ int main() {
 		}
 	}
 	for(int k=1; k <= Total_Basket; k++)
-		printf("%d ", Array[k]);	
+		printf("%d ", Array[k]);
 }
