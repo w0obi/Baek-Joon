@@ -4,11 +4,11 @@
 int main() {
 	int Array[100] = { 0, };
 	int Basket = 0, move = 0, first = 0, last = 0, i = 0, j = 0, temp = 0;
-	int Length = sizeof Array / sizeof (int);
 
-	scanf("%d%d", &Basket, &move);		 //바구니의 개수와 바구니의 순서를 변경할 횟수 입력
-
-	for (i = 0; i < Basket; i++)		 //바구니 개수만큼 배열을 할당
+    //바구니의 개수와 바구니의 순서를 변경할 횟수 입력
+	scanf("%d%d", &Basket, &move);
+    
+	for (i = 0; i < Basket; i++)		 
 		Array[i] = i + 1;
 
 	for (i = 0; i < move; i++) {		 // move만큼 반복
