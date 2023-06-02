@@ -1,41 +1,35 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+/* 학생은 성적을 조작하려한다. 조작된 평균을 구하라. */
 
-#define MAX_SUBJECTS 1000
-
-int main()
+int main(void) 
 {
-    int N;
-    scanf("%d", &N);
+	int Count = 0, Max = 0;
+	float Sum =  0.0;
+	int Score[1000] = { 0, };
 
-    if (N <= 0 || N > MAX_SUBJECTS)
-    {
-        printf("Invalid input for the number of subjects.\n");
-        return 1;
-    }
+	scanf("%d", &Count);
+	for (int i = 0; i < Count; i++)
+	{
+		scanf("%d", &Score[i]);
+	}
 
-    int scores[MAX_SUBJECTS];
-    int max_score = 0;
+	for (int i = 0; i < Count; i++)
+	{
+		if (Max < Score[i])
+		{
+			Max = Score[i];
+		}
+	}
 
-    // 점수 입력받고 최고 점수 구하기
-    for (int i = 0; i < N; i++)
-    {
-        scanf("%d", &scores[i]);
-        if (scores[i] > max_score)
-            max_score = scores[i];
-    }
+	float Edit = 0;
+	for (int i = 0; i < Count; i++)
+	{
+		Edit = ((float)Score[i] / Max) * 100;
+		Sum += Edit;
+	}
+	//if (INFINITY == (Sum / Count))
+	//	printf("계산하기에는 인수가 너무 큽니다.\n");
 
-    float sum = 0.0;
-
-    // 점수 조작하여 새로운 평균 계산
-    for (int i = 0; i < N; i++)
-    {
-        float adjusted_score = (float)scores[i] / max_score * 100;
-        sum += adjusted_score;
-    }
-
-    float average = sum / N;
-    printf("%.2f\n", average);
-
-    return 0;
+	printf("%.2f", Sum / Count);
 }
