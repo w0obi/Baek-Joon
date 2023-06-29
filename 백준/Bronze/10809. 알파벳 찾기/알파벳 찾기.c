@@ -1,30 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 
+
 int main() {
-    char S[101];
-    int positions[26];
-    int i;
+	char Input[101];
+	int countArr[26] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+						 -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+						 -1, -1, -1, -1, -1, -1 };
 
-    scanf("%s", S);
-
-    // 모든 알파벳의 위치를 -1로 초기화
-    for (i = 0; i < 26; i++) {
-        positions[i] = -1;
-    }
-
-    // 단어 S를 순회하면서 첫 번째 등장 위치를 기록
-    for (i = 0; i < strlen(S); i++) {
-        int index = S[i] - 'a';
-        if (positions[index] == -1) {
-            positions[index] = i;
-        }
-    }
-
-    // 결과 출력
-    for (i = 0; i < 26; i++) {
-        printf("%d ", positions[i]);
-    }
-
-    return 0;
+	scanf("%s", &Input);
+	for (int index = 0; index < strlen(Input); index++){
+		if (countArr[Input[index] - 'a'] == -1)
+			countArr[Input[index] - 'a'] = index;
+		else continue;
+	}
+	for (int i = 0; i < 26; i++) { printf("%d ", countArr[i]); }
+	return 0;
 }
